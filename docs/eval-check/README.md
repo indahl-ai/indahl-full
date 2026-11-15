@@ -8,7 +8,19 @@ Checks a language-model evaluation claim, or your own eval run, against twelve c
 
 - A status for each check: PRESENT (with the evidence), ABSENT (with what was checked), CANNOT_TELL (with a reason) or NOT_APPLICABLE.
 - A `not_tested` list for any check that was not run, with the reason.
-- Checks covering the parser against raw replies, the setup as part of the result, the repeat floor, recounts from released files, dropped items by reason, and intervals with the four outcomes.
+- The twelve checks:
+  1. **Parser checked against raw replies.** About 10 raw replies per task family, for at least two models, read beside the parsed answers before any rate is trusted.
+  2. **No rate before the parser check.** During a run, only progress lines are watched until check 1 is done.
+  3. **The setup is part of the result.** Harness, prompt format, chat template, few-shot count, extraction rule, max tokens and stop sequences named on both sides.
+  4. **Repeat floor first.** The same setup run twice on one machine, with the items that flip counted, before any comparison.
+  5. **Recount from released files.** Published tables recounted with independent code, item keys matched exactly.
+  6. **The harness answering for the model.** JSON mode, thinking flags, truncation, echoed input and refusals counted, with dropped items by reason for each model.
+  7. **A judge cannot grade its own labels.** A gold set built or reviewed with a judge model does not score that judge.
+  8. **Paired, not unpaired.** The same items for both models, compared item by item.
+  9. **The prompt does not contain the answer,** in few-shot examples, system prompts or retrieved context.
+  10. **A pinned name is not pinned behaviour.** Endpoint, quantization, server and GPU recorded, since they change outputs under one model name.
+  11. **Datasets and URLs age.** A replaced dataset or version is used only with row counts checked and the change written down before results.
+  12. **Interval and outcome on every number.** A 95% interval and one of ABOVE, BELOW, CONSISTENT or CANNOT_TELL beside each figure.
 
 ## How to use
 
