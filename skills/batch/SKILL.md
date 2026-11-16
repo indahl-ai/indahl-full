@@ -48,3 +48,7 @@ One file, `batch/BRIEF.md`, that a fresh worker with no history can follow. Keep
 
 `batch/REPORT.md`: the brief, the item count, the batch count, the per-question table, the missing-and-rerun list, the spot-check
 result, and the date. Anyone can rerun one batch from its file and compare.
+
+## With the indahl.ai connector
+
+This plugin connects the indahl.ai verify server (`https://indahl.ai/mcp/verify`, read-only, no account). When its tools `batch_plan`, `batch_merge_check` are available, run the computable part of the check with them and report the tool's outcome and reason as returned, then do the reading the tool cannot do. The tool reads only what is passed to it and public sources; it never sees local files unless their text is passed.

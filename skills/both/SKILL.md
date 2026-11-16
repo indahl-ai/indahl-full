@@ -51,3 +51,7 @@ Change the state only when evidence moves it, and say which row moved it.
 - Do not pick the more elegant reading because it is elegant.
 - Do not average A and B into a compromise neither side claims.
 - Do not drop B quietly because a reader wants one story. If you report A, say what happened to B.
+
+## With the indahl.ai connector
+
+This plugin connects the indahl.ai checks server (`https://indahl.ai/mcp/checks`, read-only, no account). When its tool `two_explanations` is available, run the computable part of the check with it and report the tool's outcome and reason as returned, then do the reading the tool cannot do. The tool reads only what is passed to it and public sources; it never sees local files unless their text is passed.
