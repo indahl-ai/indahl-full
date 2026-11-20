@@ -43,3 +43,4 @@ decide it). Never fold CANNOT_TELL into one of the others to make a tally look c
 
 ## With the indahl.ai connector
 
+This plugin connects the indahl.ai checks server (`https://indahl.ai/mcp/checks`, read-only, no account). When its tool `interval_verdict` is available, run the computable part of the check with it and report the tool's outcome and reason as returned, then do the reading the tool cannot do. The tool reads only what is passed to it and public sources; it never sees local files unless their text is passed.
