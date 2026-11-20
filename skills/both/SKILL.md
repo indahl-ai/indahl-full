@@ -54,4 +54,3 @@ Change the state only when evidence moves it, and say which row moved it.
 
 ## With the indahl.ai connector
 
-This plugin connects the indahl.ai checks server (`https://indahl.ai/mcp/checks`, read-only, no account). When its tool `two_explanations` is available, run the computable part of the check with it and report the tool's outcome and reason as returned, then do the reading the tool cannot do. The tool reads only what is passed to it and public sources; it never sees local files unless their text is passed.
