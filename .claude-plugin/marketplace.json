@@ -1,0 +1,17 @@
+{
+  "name": "indahl-full",
+  "owner": {
+    "name": "Heuremen LLC",
+    "url": "https://indahl.ai"
+  },
+  "plugins": [
+    {
+      "name": "indahl-full",
+      "source": "./",
+      "description": "Every Heuremen LLC plugin in one install: check papers and LLM eval claims against the Heuremen Standard, gate readings with a check block, reproduce indahl.ai desk headlines, check and correct IBM Quantum runs, and test whether a plan was pushed before the first run. Includes the indahl.ai data connector.",
+      "version": "1.0.0",
+      "category": "research",
+      "homepage": "https://indahl.ai/plugins"
+    }
+  ]
+}
